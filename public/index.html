@@ -154,7 +154,7 @@
       };
       */
       const deleteTask = async (id) => {
-       await fetch(`https://todo-backend-s9j6.onrender.com/task/delete/${id}`, {
+       await fetch(`https://todo-backend-s9j6.onrender.com/task/delete/${taskId}`, {
       method: "DELETE",
       });
       getTasks();
