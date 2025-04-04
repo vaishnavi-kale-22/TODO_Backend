@@ -8,8 +8,9 @@
   <script>
     const taskElem = document.getElementById("task");
     const input = document.getElementById("input");
-    const getTasks = async (params) => {
-      const response = await fetch("https://todo-backend-28g6.onrender.com/tasks", {
+
+    const getTasks = async () => {
+      const response = await fetch("/tasks", {
         method: "GET",
       });
       const body = await response.json();
@@ -35,10 +36,7 @@
         }),
       };
 
-      const response = await fetch(
-        "https://todo-backend-28g6.onrender.com/task",
-        requestOptions
-      );
+      const response = await fetch("/task", requestOptions);
 
       getTasks();
     };

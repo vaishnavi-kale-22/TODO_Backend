@@ -72,11 +72,9 @@ app.put('/task/:taskId', async (req, res, next) => {
         });
     }
 });
-
-app.get('*', (req, res) => {
+app.use((req, res, next) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
-  });
-  
+  });  
 
 app.listen(3000, () => {
     console.log('Server started at http://localhost:3000');

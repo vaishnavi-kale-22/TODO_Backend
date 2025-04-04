@@ -14,7 +14,7 @@ sql`CREATE TABLE IF NOT EXISTS users (age INTEGER, name TEXT)`.then(res => {
 });
 
 // create table task
-sql`CREATE TABLE IF NOT EXISTS tasks (name TEXT)`.then(res => {
+sql`CREATE TABLE IF NOT EXISTS tasks (id SERIAL PRIMARY KEY, name TEXT)`.then(res => {
     console.log('tasks table created');
 }).catch(err => {
     console.log(err);
