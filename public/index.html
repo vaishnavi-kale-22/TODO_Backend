@@ -145,13 +145,20 @@
         input.value = '';
         getTasks();
       };
-
+      /*
       const deleteTask = async (id) => {
         await fetch(`https://todo-backend-s9j6.onrender.com/task/${id}`, {
           method: "DELETE",
         });
         getTasks();
       };
+      */
+      const deleteTask = async (id) => {
+       await fetch(`https://todo-backend-s9j6.onrender.com/task/delete/${id}`, {
+      method: "DELETE",
+      });
+      getTasks();
+    };
 
       const editTask = async (id, oldName) => {
         const newName = prompt("Edit your task:", oldName);
