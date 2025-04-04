@@ -10,7 +10,7 @@
     const input = document.getElementById("input");
 
     const getTasks = async () => {
-      const response = await fetch("/tasks", {
+      const response = await fetch("https://todo-backend-1-0lm6.onrender.com/tasks", {
         method: "GET",
       });
       const body = await response.json();
@@ -36,7 +36,7 @@
         }),
       };
 
-      const response = await fetch("/task", requestOptions);
+      const response = await fetch("https://todo-backend-1-0lm6.onrender.com/task", requestOptions);
 
       getTasks();
     };
